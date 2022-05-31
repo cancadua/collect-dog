@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/collect-dog/static/css/main.689b792e.css",
+    "main.js": "/collect-dog/static/js/main.7c3e135a.js",
+    "index.html": "/collect-dog/index.html",
+    "main.689b792e.css.map": "/collect-dog/static/css/main.689b792e.css.map",
+    "main.7c3e135a.js.map": "/collect-dog/static/js/main.7c3e135a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.689b792e.css",
+    "static/js/main.7c3e135a.js"
+  ]
+}
