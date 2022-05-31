@@ -16,15 +16,15 @@
 .content {
     cursor: auto;
     margin: 15% auto;
-    background-color: white;
-    border-radius: 0.25rem;
-    width: 50vw;
+    background-color: #371B58;
+    border-radius: 3rem;
     padding: 2rem;
+    width: min-content;
     position: relative;
 }
 
 .close {
-    color: #000000;
+    color: #ffffff;
     padding: 10px;
     cursor: pointer;
     background-color: transparent;

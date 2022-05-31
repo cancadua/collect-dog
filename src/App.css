@@ -2,7 +2,6 @@
   text-align: center;
 }
 
-
 .container {
   background-color: #495371;
   min-height: 100vh;
@@ -14,7 +13,8 @@
   color: white;
 }
 
-button {
+.get-a-dog {
+  padding: 0.5rem;
   background: #74959A;
   font-size: 1rem;
   color: #fff;

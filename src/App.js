@@ -1,18 +1,24 @@
 import './App.css';
 import {useEffect, useState} from "react";
 import Modal from "./Modal";
+import Navigation from "./Navigation";
+
+function capitalizeFirstLetter(string) {
+  return string[0].toUpperCase() + string.slice(1);
+}
 
 function App() {
 
   const [list, setList] = useState()
   const [pop, setPop] = useState('');
+  // const [breed, setBreed] = useState('')
 
 
   const newDog = async () => {
     await fetch('https://dog.ceo/api/breeds/image/random')
       .then(response => response.json())
       .then(data => {
-        const newBreed = data.message.split('/')[4]
+        const newBreed = capitalizeFirstLetter(data.message.split('/')[4].replaceAll('-', ' '))
 
         setList(prevList => {
           if (prevList === undefined) return (
@@ -41,14 +47,14 @@ function App() {
   }
 
   useEffect( () => {
-    console.log(list)
   }, [list]);
 
   return (
     <div className="App">
+      <Navigation data={list}/>
       <div className="container">
-        <button onClick={newDog}>
-          Click to find new dog!
+        <button className={'get-a-dog'} onClick={newDog}>
+          🐶 Click to find new dog!
         </button>
 
         {pop && (
@@ -57,12 +63,12 @@ function App() {
           </Modal>
         )}
 
-        {/*<div>*/}
-        {/*  list && {Object.keys(list).map((image) => {*/}
-        {/*    return (*/}
-        {/*          <img src={image.message} alt={''}/>*/}
-        {/*    )})} : <div/>*/}
-        {/*</div>*/}
+        {/*    {*/}
+        {/*      return <img className={'image'} src={item.images.image} alt={''}/>*/}
+        {/*    })}*/}
+        {/*    <img src={pop} alt={''} className={'image'}/>*/}
+        {/*  </Modal>*/}
+        {/*)}*/}
       </div>
     </div>
   );
