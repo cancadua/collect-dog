@@ -23,6 +23,7 @@
 }
 
 .image {
+  border-radius: 3rem;
   max-width: 30rem;
-  height: auto;
+  max-height: 30rem;
 }
