@@ -1,7 +1,8 @@
 import "./App.css";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Modal from "./Modal";
 import "./index.css";
+import DoggiesBreedList from "./DoggiesBreedList";
 
 function capitalizeFirstLetter(string) {
   return string[0].toUpperCase() + string.slice(1);
@@ -11,6 +12,10 @@ const App = () => {
   const [list, setList] = useState();
   const [pop, setPop] = useState("");
   const [breed, setBreed] = useState("");
+
+  const displayBreed = (breedName) => {
+    setBreed(breedName);
+  };
 
   const newDog = async () => {
     await fetch("https://dog.ceo/api/breeds/image/random")
@@ -52,31 +57,41 @@ const App = () => {
   };
 
   return (
-    <div className="App">
-      <div className="navigation">
-        {list &&
-          list.map((item) => {
-            return (
-              <button onClick={setBreed(item.breed)} className={"breeds"}>
-                {item.breed}
-              </button>
-            );
-          })}
-      </div>
-      <div className="container">
+    <div className="container">
+      <div className="App">
+        <div className="navigation">
+          <button
+            onClick={(e) => {
+              displayBreed("");
+            }}
+            className={"breeds"}
+            style={{ backgroundColor: "#444" }}
+          >
+            HOME
+          </button>
+          {list &&
+            list.map((item, i) => {
+              return (
+                <button
+                  key={i}
+                  onClick={(e) => {
+                    displayBreed(e.target.innerHTML);
+                  }}
+                  className={"breeds"}
+                >
+                  {item.breed}
+                </button>
+              );
+            })}
+        </div>
         {breed === "" ? (
           <button className={"get-a-dog"} onClick={newDog}>
             🐶 Click to find new dog!
           </button>
         ) : (
-          <div>
-            {list
-              .filter((item) => item.breed === breed)[0]
-              .images.map((item, i) => {
-                console.log(item);
-                return <img key={i} src={item.image} alt={""} />;
-              })}
-          </div>
+          <DoggiesBreedList
+            list={list.filter((item) => item.breed === breed)}
+          />
         )}
       </div>
 

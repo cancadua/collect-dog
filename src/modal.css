@@ -1,33 +1,33 @@
 .overlay {
-    position: fixed;
-    display: flex !important;
-    overflow: auto;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    cursor: pointer;
+  position: fixed;
+  display: flex !important;
+  overflow: auto;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
 }
 
 .content {
-    display: flex !important;
-    align-self: center;
-    cursor: auto;
-    margin: 3rem auto;
-    background-color: #371B58;
-    border-radius: 3rem;
-    padding: 2rem;
-    width: min-content;
-    height: min-content;
-    position: relative;
+  display: flex !important;
+  align-self: center;
+  cursor: auto;
+  margin: 3rem auto;
+  background-color: #371b58;
+  border-radius: 3rem;
+  padding: 2rem;
+  width: min-content;
+  height: min-content;
+  position: relative;
 }
 
 .close {
-    color: #ffffff;
-    padding: 10px;
-    cursor: pointer;
-    background-color: transparent;
-    border: 0;
-    position: absolute;
-    top: 0.3rem;
-    right: 0.5rem;
+  color: #ffffff;
+  padding: 10px;
+  cursor: pointer;
+  background-color: transparent;
+  border: 0;
+  position: absolute;
+  top: 0.3rem;
+  right: 0.5rem;
 }
