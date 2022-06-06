@@ -1,17 +1,17 @@
-import './navigation.css'
-import {useEffect} from "react";
+// import './navigation.css'
+// import {useEffect} from "react";
 
-const Navigation = ({data}) => {
+// const Navigation = ({passState, data}) => {
 
-  useEffect(() => {}, [data])
+//   useEffect(() => {}, [data])
 
-  return (
-    <div className="navigation">
-        {data && data.map(item => {
-          return <button className={'breeds'}>{item.breed}</button>
-        })}
-    </div>
-  )
-}
+//   return (
+//     <div className="navigation">
+//         {data && data.map(item => {
+//           return <button onClick={passState(item.breed)} className={'breeds'}>{item.breed}</button>
+//         })}
+//     </div>
+//   )
+// }
 
-export default Navigation;
+// export default Navigation;

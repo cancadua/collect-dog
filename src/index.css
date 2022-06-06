@@ -1,13 +1,54 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.navigation {
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  height: 100%;
+  display: flex;
+  position: absolute;
+  left: 0;
+  border-right: solid 0.2rem #123456;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  background-color: #000000;
+}
+
+.navigation .breeds {
+  background: #293462;
+  border: none;
+  margin: 0;
+  cursor: pointer;
+  text-decoration: none;
+  padding: 1rem;
+  font-size: 1.4rem;
+  font-family: "Noto Sans JP", sans-serif;
+  color: #708cbc;
+}
+
+.navigation a:hover,
+a.active,
+.breeds:hover,
+.breeds.active {
+  transition: background-color 1s, color 1s;
+  background: #182351;
+  text-decoration: none;
+  color: #d9e7ff;
+}
+
+.navigation-left {
+  justify-content: space-around;
+  padding: 0 1rem 0 1rem;
+  margin-left: auto;
 }
