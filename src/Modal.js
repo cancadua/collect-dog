@@ -6,10 +6,7 @@ const Modal = (props) => {
 
   return (
     <div onClick={closeModal} className="overlay">
-      <div onClick={(e) => e.stopPropagation()} className="content">
-        <button onClick={closeModal} className={"close"}>
-          X
-        </button>
+      <div className="content">
         {props.children}
       </div>
     </div>

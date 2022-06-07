@@ -6,12 +6,12 @@
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   cursor: pointer;
+  z-index: 1;
 }
 
 .content {
   display: flex !important;
   align-self: center;
-  cursor: auto;
   margin: 3rem auto;
   background-color: #371b58;
   border-radius: 3rem;
