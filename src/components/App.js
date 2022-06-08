@@ -1,13 +1,16 @@
-import "./App.css";
 import { useState } from "react";
+
 import Modal from "./Modal";
-import "./index.css";
 import DoggiesBreedList from "./DoggiesBreedList";
-import Navigation from "./Navigation";
-import {capitalizeFirstLetter, handleBreedName} from "./utils/Functions";
+import {capitalizeFirstLetter, handleBreedName} from "../utils/Functions";
+
+import "../styles/app.css";
+import "../index.css";
+import "../styles/navigation.css"
 
 
 const App = () => {
+
   const [list, setList] = useState();
   const [pop, setPop] = useState("");
   const [breed, setBreed] = useState("");
@@ -30,10 +33,13 @@ const App = () => {
                 images: [data.message]
               }
             ];
-          const indexOfBreed = prevList.findIndex(
+
+          const indexOfBreed = prevList?.findIndex(
             (item) => item.breed === newBreed
           );
+
           if (indexOfBreed >= 0) {
+            if (prevList[indexOfBreed].images.includes(data.message)) return [...prevList];
             prevList[indexOfBreed].images = [
               ...prevList[indexOfBreed].images,
               data.message
@@ -54,7 +60,7 @@ const App = () => {
   };
 
   return (
-    <div className={'main'}>
+    <div className={'app'}>
 
       {pop && (
         <Modal closeModal={() => setPop("")}>
@@ -62,25 +68,25 @@ const App = () => {
         </Modal>
       )}
 
-      {/*<Navigation displayBreed={displayBreed()} list={list}/>*/}
+      {/*<Navigation displayBreed={(prop) => setBreed(prop)} list={list}/>*/}
 
       <div className="navigation">
         <button
-          onClick={(e) => {
+          onClick={() => {
             displayBreed("");
           }}
           className={"breeds"}
-          style={{ backgroundColor: "#444" }}
+          style={{ backgroundColor: "#446644" }}
         >
           HOME
         </button>
         {list &&
-          list.map((item, i) => {
+          list?.map((item, i) => {
             return (
               <button
                 key={i}
                 onClick={(e) => {
-                  displayBreed(e.target.innerHTML);
+                  displayBreed(e?.target.innerHTML);
                 }}
                 className={"breeds"}
               >
@@ -98,7 +104,7 @@ const App = () => {
             </button>
           ) : (
             <DoggiesBreedList
-              list={list.filter((item) => item.breed === breed)}
+              list={list?.filter((item) => item.breed === breed)}
             />
           )}
         </div>

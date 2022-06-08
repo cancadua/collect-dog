@@ -1,0 +1,10 @@
+.imagesContainer {
+  width: 60vw;
+}
+
+.imagesContainer img {
+  border-radius: 100px;
+  padding: 4rem;
+  width: 80%;
+  height: auto;
+}
