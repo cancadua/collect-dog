@@ -1,4 +1,4 @@
-# ** Collect dogs app **
+# Collect dogs app
 
 ## Button loads new randomly picked dog picture, displays it and saves to watch later
 
@@ -6,4 +6,4 @@
 
 ## Start app
 
-### type `npm start` in main folder
+### type `npm start` in main folder woth chosen command line application
