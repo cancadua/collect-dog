@@ -14,19 +14,7 @@
   align-self: center;
   margin: auto;
   border-radius: 3rem;
-  padding: 2rem;
   width: min-content;
   height: min-content;
   position: relative;
-}
-
-.close {
-  color: #ffffff;
-  padding: 10px;
-  cursor: pointer;
-  background-color: transparent;
-  border: 0;
-  position: absolute;
-  top: 0.3rem;
-  right: 0.5rem;
 }

@@ -1,7 +1,7 @@
-import App from './app'
-import DoggiesBreedList from './DoggiesBreedList'
+import Main from '../Main'
+import BreedPicturesList from './BreedPictureList/BreedPicturesList'
 import Modal from './Modal'
 
 export {
-  App, DoggiesBreedList, Modal
+  Main, BreedPicturesList, Modal
 }

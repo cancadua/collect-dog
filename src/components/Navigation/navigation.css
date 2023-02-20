@@ -1,0 +1,55 @@
+.navigation {
+  top: 0;
+  bottom: 0;
+  margin-top: 5rem;
+  width: 30%;
+  overflow-y: scroll;
+  min-width: 10rem;
+  display: flex;
+  position: fixed;
+  left: 0;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  background-color: #55775550;
+  z-index: 103;
+  gap: 0.5rem;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.navigation::-webkit-scrollbar { 
+    display: none;
+}
+
+.navigation button {
+  border: none;
+  padding: 0.5rem;
+  background: #45382a60;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.navigation button:hover {
+  background: #45382a90;
+}
+
+
+.menu-hamburger {
+  background: none;
+  border: none;
+  display: inline-block;
+  cursor: pointer;
+  position: fixed;
+  left: 20px;
+  top: 20px;
+  z-index: 104;
+}
+
+.bar1, .bar2, .bar3 {
+  border-radius: 0.5rem;
+  width: 2rem;
+  height: 0.5rem;
+  background-color: #333;
+  margin: 0.2rem 0;
+}

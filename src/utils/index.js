@@ -1,6 +1,6 @@
-import { capitalizeFirstLetter, handleBreedName } from './Functions';
+import { capitalizeFirstLetter, handleBreedName } from './functions';
 
 module.exports = {
-  capitalizeFirstLetter,
-  handleBreedName
+    capitalizeFirstLetter,
+    handleBreedName
 }
