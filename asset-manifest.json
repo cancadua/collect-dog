@@ -1,13 +1,14 @@
 {
   "files": {
-    "main.css": "/collect-dog/static/css/main.a1989b83.css",
-    "main.js": "/collect-dog/static/js/main.9a9dec51.js",
+    "main.css": "/collect-dog/static/css/main.25ef7377.css",
+    "main.js": "/collect-dog/static/js/main.a5c7b454.js",
+    "static/media/dog-bg.png": "/collect-dog/static/media/dog-bg.fea3045ddc7186391664.png",
     "index.html": "/collect-dog/index.html",
-    "main.a1989b83.css.map": "/collect-dog/static/css/main.a1989b83.css.map",
-    "main.9a9dec51.js.map": "/collect-dog/static/js/main.9a9dec51.js.map"
+    "main.25ef7377.css.map": "/collect-dog/static/css/main.25ef7377.css.map",
+    "main.a5c7b454.js.map": "/collect-dog/static/js/main.a5c7b454.js.map"
   },
   "entrypoints": [
-    "static/css/main.a1989b83.css",
-    "static/js/main.9a9dec51.js"
+    "static/css/main.25ef7377.css",
+    "static/js/main.a5c7b454.js"
   ]
 }
